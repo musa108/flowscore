@@ -1,0 +1,23 @@
+import "./globals.css";
+import { ClerkProvider } from "@clerk/nextjs";
+
+export const metadata = {
+  title: "FlowScore",
+  description: "Smart cashflow analytics for SMEs",
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en">
+      <body>
+        <ClerkProvider>
+          {children}
+        </ClerkProvider>
+      </body>
+    </html>
+  );
+}
