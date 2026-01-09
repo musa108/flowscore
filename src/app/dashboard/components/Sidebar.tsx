@@ -1,6 +1,6 @@
 "use client";
 
-import { Home, BarChart2, CreditCard, PieChart } from "lucide-react";
+import { Home, BarChart2, CreditCard, PieChart, User, ShieldCheck } from "lucide-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
@@ -10,6 +10,8 @@ export function Sidebar() {
 
   const links = [
     { href: "/dashboard", label: "Overview", icon: Home },
+    { href: "/dashboard/profile", label: "My Profile", icon: User },
+    { href: "/dashboard/kyc", label: "KYC Verification", icon: ShieldCheck },
     { href: "/analytics", label: "Analytics", icon: BarChart2 },
     { href: "/transactions", label: "Transactions", icon: CreditCard },
     { href: "/score", label: "Score", icon: PieChart },
@@ -37,6 +39,7 @@ export function Sidebar() {
         {links.map((link, i) => {
           const Icon = link.icon;
           const isActive = pathname === link.href;
+
           return (
             <motion.div
               key={i}

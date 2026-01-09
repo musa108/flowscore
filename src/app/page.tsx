@@ -21,7 +21,7 @@ export default function HomePage() {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
-        className="text-5xl font-extrabold tracking-tight mb-4 bg-clip-text text-transparent bg-linear-to-r"
+        className="text-5xl font-extrabold text-blue-400 tracking-tight mb-4 bg-clip-text"
       >
         FlowScore
       </motion.h1>

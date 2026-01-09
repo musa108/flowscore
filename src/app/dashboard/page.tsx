@@ -4,14 +4,11 @@ import { motion } from "framer-motion";
 
 import { Navbar } from "./components/Navbar";
 import { Sidebar } from "./components/Sidebar";
-
 import { CashflowChart } from "./components/CashflowChart";
 import { RecentTransactions } from "./components/RecentTransactions";
 import { FlowScoreGauge } from "./components/FlowScoreGauge";
 import { OverviewCards } from "./components/OverviewCards";
-import { ExportButtons } from "./components/exportButton";
-import { TaxCalculatorCard } from "./components/TaxCalculator";
-import { VATCalculatorCard } from "./vatCalculator";
+
 
 export default function DashboardPage() {
     return (
@@ -61,24 +58,6 @@ export default function DashboardPage() {
                         </motion.div>
                     </div>
 
-                    {/* tax calculator & Vat calculator */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <motion.div
-                            initial={{ opacity: 0, y: 10 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: 0.1 }}
-                        >
-                            <TaxCalculatorCard />
-                        </motion.div>
-
-                        <motion.div
-                            initial={{ opacity: 0, y: 10 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: 0.2 }}
-                        >
-                            <VATCalculatorCard />
-                        </motion.div>
-                    </div>
 
                     {/* Recent Transactions */}
                     <motion.div
