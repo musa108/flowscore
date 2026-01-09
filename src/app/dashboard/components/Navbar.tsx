@@ -26,15 +26,6 @@ export function Navbar() {
                     <Menu className="h-6 w-6" />
                 </motion.button>
 
-                {/* Dashboard Title */}
-                <motion.h1
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 0.1, duration: 0.5 }}
-                    className="text-xl font-semibold tracking-tight"
-                >
-                    Dashboard
-                </motion.h1>
             </div>
 
             {/* Right Section */}
